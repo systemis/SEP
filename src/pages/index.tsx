@@ -8,7 +8,7 @@ import RelatedPpost from '@/src/components/related-post';
 const Home: NextPage = () => {
   return (
     <Layout>
-      <img src="/assets/blog-bg-1.png" className='w-full max-h-[400px] object-contain' />
+      <img src="/assets/blog-bg-1.png" className='w-full max-h-[400px] object-cover' />
       <div className={classnames(styles.container, 'pt-[50px] px-[20px] max-w-[700px] mx-auto')}>
         <div className='header-container flow-root'>
           <div className='float-left'>
@@ -23,8 +23,8 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className='float-right'>
-            <i className='bx bxl-facebook-circle text-[25px]'></i>
-            <i className='bx bxl-twitter text-[25px] ml-[10px]'></i>
+            <i className='bx bxl-facebook-circle text-[25px] cursor-pointer' onClick={() => window.open('https://www.facebook.com/')}></i>
+            <i className='bx bxl-twitter text-[25px] ml-[10px] cursor-pointer' onClick={() => window.open('https://twitter.com/home')}></i>
           </div>
         </div>
         <article className='mt-[30px]'>
