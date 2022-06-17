@@ -1,8 +1,8 @@
 import React from 'react';
 import type { NextPage } from 'next'
 import classnames from 'classnames';
-import styles from '../../styles/Home.module.css'
 import Layout from '@/src/components/layout';
+import styles from '../../styles/Home.module.css'
 
 const Login: NextPage = () => {
   return (
