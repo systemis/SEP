@@ -16,6 +16,8 @@
     "incremental": true, 
     "rootDir": ".",
     "baseUrl": ".",
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
     "paths": {
       "@/*": ["./*"],
     },

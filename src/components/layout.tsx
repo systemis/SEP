@@ -1,6 +1,8 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import classnames from 'classnames';
+
+const unAuth = ["/login"];
 
 export interface MenuItem {
   href: string;
@@ -15,6 +17,15 @@ const Layout: React.FC<{ notFooter?: boolean | false }> = ({ children, notFooter
     { href: '/profile', title: 'PROFILE' },
     { href: '/login', title: 'LOGIN' }
   ], []);
+
+  useEffect(() => {
+    (async () => {
+      const access_token = localStorage.getItem('access_token');
+      if (!access_token && !unAuth.filter((item) => item === router.asPath).length) {
+        router.push('/login');
+      }
+    })();
+  }, []);
 
   return (
     <div className='app-layout'>
